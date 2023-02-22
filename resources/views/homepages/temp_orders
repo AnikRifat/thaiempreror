@@ -1,0 +1,12 @@
+
+                  
+                  @if(Session::get('_orders'))
+                    @foreach(Session::get('_orders') as $order)
+                    <tr>
+                      <td class="names"><span class="ItemsName">{{$order->item_name}} </span><input type="hidden" value="{{$order->item_id}}" name="itemId[]"><input type="hidden" value="{{$order->item_name}}" name="itemName[]"></td>
+                      <td>&pound;{{$order->item_price}}<input type="hidden" value="{{$order->item_price}}" name="itemPrice[]"></td>
+                      <td>{{$order->item_qty}}<input type="hidden" value="{{$order->item_qty}}" name="itemQty[]"></td>
+                      <td width="40"><span onclick="removetr(this)" class="remove"><a>-</a></span></td>
+                    </tr>
+                    @endforeach
+                    @endif

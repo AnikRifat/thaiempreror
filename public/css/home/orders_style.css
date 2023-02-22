@@ -1,0 +1,7 @@
+.food_price span{font-size:16px;font-weight:700;font-family:'Roboto';}
+.media-top .btn{padding: 5px;font-size: 12px;}
+.orders_section{max-width: 300px;overflow: auto;}
+.table{border-collapse: collapse; max-width: 480px;width: 100%!important;}
+.table tr th{font-weight: bold;}
+.table tr th, .table tr td{border: 1px solid #ddd;}
+.remove a{color: red;display: block;font-weight:bold;text-align: center;}

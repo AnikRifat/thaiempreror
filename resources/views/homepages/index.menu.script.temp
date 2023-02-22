@@ -1,0 +1,154 @@
+<!--====| Shuffle Menu Style Sta rt|====--> 
+<style type="text/css">
+  .sub-cats {text-align: center!important;vertical-align: baseline;padding: 25px;}
+  .sub-cats li .active{background:#cb984b;color: #fff;}
+  .sub-cats li {color: #000;border: 1px solid #aaa;margin: 0 5px 5px 0;display: inline-block;}
+  .sub-cats li a {color: #000;display: block; padding: 2px 10px;}
+  .quantity{margin-bottom: 10px;}
+  .quantity input[type="button"] {padding: 0;font-size: 12px;font-weight: bold;width: 20px}
+</style>
+
+
+  <section id="food-menu" class="galleri-wrapper food-menu-wrapper section-padding">
+    <div class="container"> 
+      <div class="row"> 
+        <div class="col-xs-12"> 
+          <h1 style="font-size:60px">food menu</h1> 
+          <p class="slogan">All our food are made freshly to be healthy.</p>
+        </div>
+      </div>
+
+      <div class="row"> 
+        <div class="gallery-trigger">
+          <ul id="filter">
+           {{-- <li><a class="active" href="#" data-group="total">all</a></li> --}}
+           @foreach($cats as $cat)
+           <li><a onClick="showCat(this);" name="{{'cat'.$cat->id}}">{{$cat->cat_name}}</a></li> 
+           @endforeach
+          </ul> 
+        </div>
+
+        @foreach($cats as $cat)
+       {{-- <div id="grid"> --}}
+       <div class="ItemCat" id="{{'cat'.$cat->id}}" style="display:none">
+        <h2>{{$cat->cat_name}}</h2>
+        <!-- portfolio-item -->
+        <?php $subcats = DB::table('food_sub_cats')->where('cat_id', $cat->id)->get(); ?>
+        @if(count($subcats) > 0)
+        <div class="clearfix"></div>
+        <h2 style="font-size:20px;color:#f00;" class="nosubitems">Please click on the sub-categories to view the food items.</h2>
+          <ul class="sub-cats" id="filter">
+          @foreach($subcats as $subcat)
+            <li><a class="subcatkey" style="font-weight:bold" onClick="showSubCat(this);" name="{{$cat->id.'subcat'.$subcat->id}}">{{$subcat->sub_cat_name}}</a></li>
+          @endforeach
+          </ul>
+          
+          @foreach($subcats as $subcat)
+          <div class="clearfix"></div>
+          <div class="ItemSubCat" id="{{$cat->id.'subcat'.$subcat->id}}" style="display:none"> <!--sub-cat-block-->
+            <h2>{{$subcat->sub_cat_name}}</h2>
+            <hr class="clearfix">
+            @foreach(DB::table('food_items')->orderBy('for_web', 'DESC')->where('sub_cat_id', $subcat->id)->get() as $item)
+            <div class="portfolio-item col-xs-12 col-sm-6 col-md-6" data-groups='["total", "{{$item->cat_id}}"]'>
+              <div class="portfolio">
+                <div class="media menu-media order_item">
+                  <div class="media-left media-top">
+                    <a href="#">
+                      <img src="/images/{{$item->image?'items/'.$item->image:'no_image.png'}}" alt="{{$item->food_name}}">
+                    </a>
+                  </div><!-- media left-->
+                  <div class="media-body">
+                    <input type="hidden" name="item_id" value="{{$item->id}}">
+                    <h2 class="item_name">{{$item->food_name}} </h2>
+                    <p>{{$item->details}}</p>                
+                  </div><!--/.media body-->
+                  <div class="media-left media-top">
+                    <h2 class="food_price"><span>&pound;</span><span class="item_price">{{$item->price}}</span></h2>
+                    @if($item->for_web == 1)
+                    <div class="quantity">
+                      <input type="button" value="-" class="qtyMinus">
+                      <span class="qtyshow">1</span>
+                      <input type="button" value="+" class="qtyPlus">
+                    </div>
+                    <input class="btn addordr" type="button" value="+ order">
+                    @endif
+                  </div>
+                </div>
+              </div>      
+            </div><!-- col-xs-12 -->
+            @endforeach
+          </div> {{-- sub-cats block --}}
+        @endforeach <!-- subcats -->        
+      @else
+        @foreach(DB::table('food_items')->orderBy('for_web', 'DESC')->where('cat_id', $cat->id)->get() as $item)
+        <div class="portfolio-item col-xs-12 col-sm-6 col-md-6" data-groups='["total", "{{$item->cat_id}}"]'>
+          <div class="portfolio">
+            <div class="media menu-media order_item">
+              <div class="media-left media-top">
+                <a href="#">
+                  <img src="/images/{{$item->image?'items/'.$item->image:'no_image.png'}}" alt="{{$item->food_name}}">
+                </a>
+              </div><!-- media left-->
+              <div class="media-body">
+                <input type="hidden" name="item_id" value="{{$item->id}}">
+                <h2 class="item_name">{{$item->food_name}} </h2>
+                <p>{{$item->details}}</p>                
+              </div><!--/.media body-->
+              <div class="media-left media-top">
+                <h2 class="food_price"><span>&pound;</span><span class="item_price">{{$item->price}}</span></h2>
+                @if($item->for_web == 1)
+                <div class="quantity">
+                  <input type="button" value="-" class="qtyMinus">
+                  <span class="qtyshow">1</span>
+                  <input type="button" value="+" class="qtyPlus">
+                </div>
+                <input class="btn addordr" type="button" value="+ order">
+                @endif
+              </div>
+            </div>
+          </div>      
+        </div><!-- col-xs-12 -->
+        @endforeach
+        @endif
+
+      </div> <!-- grid -->
+      @endforeach {{-- $cats as $cat --}}
+      <h1 id="noitems_alert">Please click on the categories to view the food items.</h1><br>
+      <div class="clearfix"></div>
+      <hr>
+      <a class="btn" style="padding:5px 15px;font-size: 15px" href="/#food-menu">Back to Food Menu</a>
+      <!-- <div class="load-button text-center">
+        <button class="btn" name="submit" type="submit">load more</button>
+      </div> -->
+      <script type="text/javascript">
+
+      // show cats
+      function showCat(sitems){
+        var ItemCat = document.getElementsByClassName('ItemCat');
+        for(var i = 0; i < ItemCat.length; i++){
+          if(sitems.name == ItemCat[i].id){
+            ItemCat[i].style.display = 'block';
+            document.getElementById('noitems_alert').style.display = 'none';
+          } else {
+            ItemCat[i].style.display = 'none';
+          }
+        }
+      }
+      // show sub cats
+      function showSubCat(subcat){
+        var ItemSubCat = document.getElementsByClassName('ItemSubCat');
+        var subcatkey = document.getElementsByClassName('subcatkey');
+        for(var i = 0; i < ItemSubCat.length; i++){
+          if(subcat.name == ItemSubCat[i].id){
+            ItemSubCat[i].style.display = 'block';
+            // document.getElementsByClassName('nosubitems')[1].style.display = 'none';
+          } else {
+            ItemSubCat[i].style.display = 'none';
+          }
+        }        
+      }
+      </script>
+    </div><!-- row -->
+  </div><!-- container -->
+</section> 
+<!--====| Shuffle Menu Style End |====-->

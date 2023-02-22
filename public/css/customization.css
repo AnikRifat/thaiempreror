@@ -1,0 +1,338 @@
+.delete-alert{position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: none; z-index: 99999; width: 280px; padding: 20px; background: rgb(255, 255, 255); min-height: 200px;box-shadow: 0 0 10px #ddd; max-height: 200px;}
+
+.action{}
+.action a{padding: 0 2px; margin: 0;}
+.btn-center {
+    display: block;
+    margin: 10px auto;
+    width: 30%;
+}
+
+.bill_of_landing_details, .pick-up, .delivery {
+	text-align: center;
+}
+
+.bill_of_landing_details h5 {
+	border-bottom: 1px solid #eee;
+}
+
+.form-head {
+	text-align: center;
+	border-bottom: 1px solid #eee;
+}
+
+
+.form-selct {
+    border: 1px solid #ccc;
+    overflow: hidden;
+    background: #fafafa url("images/icon-select.png") no-repeat 90% 50%;
+}
+
+.form-selct select {
+	padding: 5px 8px;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+}
+
+.form-selct select:focus {
+	outline: none;
+}
+
+.border-input {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(221, 221, 221);
+  border-bottom: 0 !important;
+  border-radius: 2px;
+  padding-left: 5px;
+}
+.needed-table {
+    text-align: center;
+}
+
+.needed-table thead tr th {
+    text-align: center;
+    background: #c3c3c3;
+    color: #fff;
+}
+
+.ticket-check {
+    display: block;
+    margin: 0 auto;
+}
+
+.container-btn {
+    border: 1px solid #ddd;
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.pick-de-input {
+    border: 1px solid #ddd !important;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    border-bottom: 0 !important;
+    padding-left: 5px !important;
+}
+td#table-check {
+
+}
+.horizontal-bar {
+    width: 100%;
+    background: #000;
+    height: 3px;
+}.container-add {
+    overflow: hidden;
+}
+.btn-container {
+    width: 100%;
+}
+.container-table {
+    margin-top: 50px; 
+}
+.container-label {
+    
+}
+.container-btn.btn-sm.btn-primary {
+    background: #89229B;
+    border: 1px solid #89229B;
+}
+.table-space {
+    margin-bottom: 5px
+}
+.table-space thead th {
+    background: #ccc;
+}
+#c-single {
+    background: #eee;    
+}
+.delete {
+    background: #89229B;
+}
+.container-ticket-buttons {
+    display: block;
+    margin: 0 auto;
+    width: 35%;
+}
+.padding-td {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+.ticket-buttons {
+    width: 45%;
+    margin: 0 auto;
+}
+.lekha-left {
+    text-align: left !important;
+}
+.lekha-right {
+    text-align: right !important;
+}
+/*Print Table Design Will start here*/
+.ticket-area {
+    width: 960px;
+    margin: 0 auto;
+    background: #fff;
+    margin-bottom: 450px;
+}
+.ticket-area table td{
+    padding:5px !important;
+}
+.ticke-logo {}
+.ticke-logo img {
+    margin-left: 45px;
+    margin-top: 15px;
+}
+
+#ticket-number {
+    text-align: center;
+}
+#ticket-number {
+    border: 1px solid #333;
+    padding: 5px;
+    text-align: center;
+}
+.ticket-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#ticket-time {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.bottomless-table {
+    margin-bottom: 0 !important;
+}
+.border-less {
+    border: 0;
+    text-align: right !important;
+}
+
+.ticket-indicator {
+    border-bottom: 2px solid #222;
+    position: relative;
+}
+.ticket-indicator h3 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.ticket-indicator p {
+    text-align: right;
+    border: 1px solid #222;
+    padding: 2px 8px 2px 8px;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
+
+
+.ticket-indicator-bottom {}
+.ticket-indicator-bottom h3 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.work-order-btn {
+    margin: 0 auto;
+    width: 35%;
+}
+
+.alert {
+  left: 2.5%;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 62px;
+  width: 95%;
+  z-index: 7;
+}
+.action-button {}
+.cross-icon {
+  background: transparent none repeat scroll 0 0;
+  border: medium none;
+}
+.button-form {
+  display: block;
+  float: right;
+  width: 25px;
+}
+.material-icons.cross-icon.text-danger {
+  padding: 0;
+}
+.action-button {
+    display: block;
+    margin: 0 auto;
+    width: 55px;
+}
+.action-edit i {
+    color: #F44336;
+}
+.alert-container {
+    position: relative;
+}
+.material-icons.alert-i {
+  border: 1px solid #eee;
+  border-radius: 100px;
+  color: #eee !important;
+  cursor: pointer;
+  float: right;
+}
+
+.delte-parent {
+    position: relative;
+}
+.delete-form {
+    float: left;
+    padding: 0;
+    width: 25px;
+    position: relative;
+}
+
+.delete-form button {
+  background: transparent none repeat scroll 0 0;
+  border: medium none;
+  margin: 0;
+  padding: 0;
+}
+.material-icons.con-delete {
+  background: transparent none repeat scroll 0 0;
+  border: medium none;
+  color: #e91e63;
+}
+.transperent {
+  background: transparent;
+  border: none;
+}
+
+.needed-table .form-group{margin: 0px 0 !important; padding: 0;}
+.needed-table td{padding: 0;}
+button.btn.btn-rose.btn-fill {
+    margin-top: 17px;
+}
+.email-padding {
+  padding-bottom: 40px;
+}
+
+@media print{    
+    .print {
+        display: none !important;
+    }
+}
+
+/* create and edit order page*/
+.itemName, .unitPrice, .price, .totalPrice{ border: none;}
+ .itemQty, .totalPrice, .price{width: 50px!important;text-align: center;}
+ .remarks{width: 100%!important;}
+ .remove{color:#f00; cursor:pointer; display:block; font-size:20px; border:1px solid #f00;text-align: center;}
+ .remove a{color:#f00;}
+ .orders td{padding: 10px 0}
+ .orders td:first-child{padding-right: 5px}
+ #foodItemsTbl td{padding: 5px;}
+
+ /* */
+ /*.portfolio-item{margin-bottom: 15px;}*/
+ #menu .portfolio{background: #fefefe;}
+ #menu .media-body{border:1px solid #ddd; clear:bottom;}
+ #menu .addordr{margin-top: 0px; margin-left: 15px;}
+ .quantity{float: left;}
+ #menu .itemIntro{font-size: 16px;font-weight: bold;border-bottom: 1px solid #ddd;padding: 5px 10px;background: #efefef; display: table;width: 100%}
+ #menu .details{max-width: 60%;float: left;padding: 10px}
+ .itemControl{}
+ #menu .controls{max-width: 40%;text-align: right;clear: top;float:right;margin-top: 15px;padding: 5px 10px}
+ .ItemCat h4{text-transform: uppercase;font-weight: bold;text-align: center;margin-bottom: 15px;}
+ .sub-cats {}
+  .sub-cats li .active{}
+  .sub-cats li {}
+  .sub-cats li a {}
+  .quantity{margin-bottom: 10px;}
+  .quantity input[type="button"] {padding: 0;font-size: 12px;font-weight: bold;width: 20px}
+  .gallery-trigger ul{list-style: none;}
+  #menu .gallery-trigger ul li{margin-right: 10px;margin-bottom: 10px}
+  #menu .gallery-trigger ul li a{display:block; padding: 5px 15px;text-decoration: none;cursor: pointer;background: #fff; border:1px solid #333;font-weight: bold;color: #000;background: #eee;}
+  .ItemCat h2{text-align: center;}
+  .quantity{margin-bottom: 10px;}
+.quantity input[type="button"] {padding: 0;font-size: 14px;font-weight: bold;width: 20px;}
+.qtyshow{padding: 0 5px;max-width: 30px;}
+
+.item_name, .food-price{;display: table-cell;font-size: 16px}
+.item_name{}
+.food-price{text-align: right;color:#800;}
+
+ @media(max-width: 480px){
+  .addordr{margin-left: 0!important;}
+  #menu .quantity{margin-left: 10px!important}
+  #menu .gallery-trigger ul li{width: 100%!important;float: none!important;}
+  #menu .gallery-trigger ul li a{width: 90%!important;padding: 5px 10px!important;}
+  .items-table{margin-left: -25px!important; margin-right: -25px!important}
+  .sub-cats li {width: 100%!important}
+ }
