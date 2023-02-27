@@ -2,10 +2,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Excellent Thai Restaurant in Kent | Thai Emperor - Home Page</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="/images/logo.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/logo.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/logo.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/logo.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/logo.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/logo.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/logo.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/logo.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
+
 <!-- Canonical SEO -->
 <link rel="canonical" href="" />
 <!--  Social tags      -->
-Meta Title Tag: " | "
+
 
 <meta name="keywords"
   content="Thai Food, Online order, Home delivery, Food Thai, Cuisine, Thai Cuisine,thai, thai food, thai restaurant in Kent,best thai food,excellent thai food,superb thai food,best customer service,cordial service,best thai food delivery,prompt delivery, op Dining in Kent, Thai Breakfast, Thai Lunch, Thai Dinner, Breakfast, Lunch, Dinner, Brunch, Food from Thailand, Thai recipe, Thai food in Swanley, Thai Food in London, Famous Thai Food, Good food, Meal,Sit in restaurnat, Thai restaurant, Classy restaurant, MP Laura Trott, Mayor Lesley Dyball,Cllr Michael Horwood ,Affordable thai food , Swanley, Dartford, Sevenoaks, Chistlehurst, Orpington, Pettswood, Kent, Welling, Bexley, Bromley, Rochester, Maidstone">
