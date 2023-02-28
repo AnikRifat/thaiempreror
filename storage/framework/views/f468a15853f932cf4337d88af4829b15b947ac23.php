@@ -12,17 +12,21 @@
                             <li><i class="fa fa-clock-o mx-2"></i><?php echo e($hdate); ?></li>
 
                         </ul>
-                        <h1 class="text-center"><?php echo e($blog->title); ?></h1>
+                        <h1 class="text-center mt-3" style="
+                        margin-top: 20PX;
+                    "><?php echo e($blog->title); ?></h1>
                         <p class="slogan"><?php echo e($blog->sub_title); ?></p>
 
 
                     </div>
                     <div class="article-img text-center">
-                        <img src="/images/home/<?php echo e($blog->image); ?>" title="<?php echo e($blog->title); ?>" alt="">
+                        <img src="/images/home/<?php echo e($blog->image); ?>" class="img-blog" title="<?php echo e($blog->title); ?>" alt="">
                     </div>
 
-                    <div class="article-content">
+                    <div class="article-content ">
+
                         <?php echo $blog->details; ?>
+
 
                     </div>
 

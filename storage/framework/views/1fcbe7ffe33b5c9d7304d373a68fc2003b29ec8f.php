@@ -588,7 +588,7 @@
           <div class="col-xs-12 col-md-12">
             <div class="grid">
               <figure class="effect-cheff gallary-image">
-                <img src="/images/home/gallery-08.jpg" alt="Gallery 08">
+                <img src="/images/home/Pad Thai.jpg" alt="Gallery 08">
                 
               </figure>
             </div>
@@ -729,7 +729,7 @@
     <div class="row">
 
       <?php $__currentLoopData = $blogs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $blog): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-      <div class="col-lg-3">
+      <div class="col-lg-4">
 
 
         <div class="blog-grid">
@@ -740,8 +740,9 @@
             </a>
           </div>
           <div class="blog-info">
-            <h5><a href="<?php echo e(route('blog.details',$blog->id)); ?>"><?php echo e($blog->title); ?></a></h5>
-            <p><?php echo e($blog->sub_title); ?></p>
+            <a href="<?php echo e(route('blog.details',$blog->id)); ?>"><p
+                class="blog-title truncate-1"><?php echo e($blog->title); ?></p></a>
+            <p class="truncate-1"><?php echo e($blog->sub_title); ?></p>
             <div class="btn-bar">
               <a href="<?php echo e(route('blog.details',$blog->id)); ?>" class="px-btn-arrow">
                 <span>Read More</span>

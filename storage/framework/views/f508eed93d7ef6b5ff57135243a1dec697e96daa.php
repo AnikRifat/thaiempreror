@@ -9,7 +9,19 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <style>
+            .equal-height {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .blog-grid {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+        </style>
+        <div class="row equal-height">
 
             <?php $__currentLoopData = $blogs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $blog): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="col-lg-3">
@@ -23,8 +35,9 @@
                         </a>
                     </div>
                     <div class="blog-info">
-                        <h5><a href="<?php echo e(route('blog.details',$blog->id)); ?>"><?php echo e($blog->title); ?></a></h5>
-                        <p><?php echo e($blog->sub_title); ?></p>
+                        <h5><a href="<?php echo e(route('blog.details',$blog->id)); ?>" class="truncate-1"><?php echo e($blog->title); ?></a>
+                        </h5>
+                        <p class="truncate-1"><?php echo e($blog->sub_title); ?></p>
                         <div class="btn-bar">
                             <a href="<?php echo e(route('blog.details',$blog->id)); ?>" class="px-btn-arrow">
                                 <span>Read More</span>
@@ -33,6 +46,10 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
             </div>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 

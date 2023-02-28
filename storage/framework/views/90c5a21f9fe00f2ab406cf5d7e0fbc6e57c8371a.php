@@ -31,12 +31,17 @@
                         </div>
                         <br>
                         <div class="">
-                            <?php echo e(Form::label('image', 'Upload Image (Image Dimension: 570x298)', ['class' => ''])); ?>
+                            <?php echo e(Form::label('image', 'Upload Image (Image Dimension: 350x350)', ['class' => ''])); ?>
 
-                            <?php echo e(Form::file('image', ['class' => 'dropify','data-max-file-size'=>'3M','data-width'=>'400', 'style' => 'border-bottom:1px solid #ccc; padding:10px 5px;width:100%'])); ?>
+                            <?php echo e(Form::file('image', ['class' => 'dropify','data-max-file-size'=>'1M','data-width'=>'200', 'style' => 'border-bottom:1px solid #ccc; padding:10px 5px;width:100%'])); ?>
 
                         </div>
                         <div class="form-group label-floating">
+                            <input type="hidden" name="x" id="x">
+                            <input type="hidden" name="y" id="y">
+                            <input type="hidden" name="width" id="width">
+                            <input type="hidden" name="height" id="height">
+                            
                             
                             <?php echo e(Form::textarea('details', null, ['class' => 'form-control border-input', 'rows' => 5])); ?>
 
@@ -59,6 +64,24 @@
 <script>
     $('.dropify').dropify();
     CKEDITOR.replace( 'details' );
+
+
+
+    $(function() {
+        var image = document.getElementById('image');
+        var cropper = new Cropper(image, {
+            aspectRatio: 1,
+            viewMode: 1,
+            dragMode: 'move',
+            autoCropArea: 1,
+            crop: function(e) {
+                $('#x').val(e.detail.x);
+                $('#y').val(e.detail.y);
+                $('#width').val(e.detail.width);
+                $('#height').val(e.detail.height);
+            }
+        });
+    });
 </script>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -72,7 +72,7 @@ class BlogController extends Controller
             $image    = $request->file('image');
             $filename = time() . '.' . $image->getClientOriginalExtension();
             $location = ('images/home/' . $filename);
-            Image::make($image)->resize(350, null)->save($location);
+            Image::make($image)->resize(350, 350)->save($location);
 
             $blog->image = $filename;
         }
@@ -145,7 +145,7 @@ class BlogController extends Controller
             $image    = $request->file('image');
             $filename = time() . '.' . $image->getClientOriginalExtension();
             $location = ('images/home/' . $filename);
-            Image::make($image)->resize(350, null)->save($location);
+            Image::make($image)->resize(350, 350)->save($location);
 
             $blog->image = $filename;
         }

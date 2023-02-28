@@ -13,17 +13,21 @@
                             <li><i class="fa fa-clock-o mx-2"></i>{{ $hdate }}</li>
 
                         </ul>
-                        <h1 class="text-center">{{ $blog->title }}</h1>
+                        <h1 class="text-center mt-3" style="
+                        margin-top: 20PX;
+                    ">{{ $blog->title }}</h1>
                         <p class="slogan">{{ $blog->sub_title }}</p>
 
 
                     </div>
                     <div class="article-img text-center">
-                        <img src="/images/home/{{ $blog->image}}" title="{{ $blog->title }}" alt="">
+                        <img src="/images/home/{{ $blog->image}}" class="img-blog" title="{{ $blog->title }}" alt="">
                     </div>
 
-                    <div class="article-content">
+                    <div class="article-content ">
+
                         {!! $blog->details !!}
+
                     </div>
 
                 </article>

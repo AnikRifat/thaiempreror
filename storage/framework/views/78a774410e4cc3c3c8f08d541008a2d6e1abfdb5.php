@@ -2,6 +2,7 @@
 <script src="<?php echo e('/js/jquery-ui.min.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo e('/js/bootstrap.min.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo e('/js/material.min.js'); ?>" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
 <script src="<?php echo e('/js/perfect-scrollbar.jquery.min.js'); ?>" type="text/javascript"></script>
 <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
 <script type="text/javascript" src="https://jeremyfagis.github.io/dropify/dist/js/dropify.min.js"></script>
