@@ -67,7 +67,7 @@ class HomeController extends Controller
 
     public function blogdetails($id)
     {
-
+        $leatestBlog = Blog::orderBy('id', 'DESC')->take(4)->get();
         $blog = Blog::find($id);
 
 
@@ -76,7 +76,7 @@ class HomeController extends Controller
         $hdate = Carbon::parse($timestamp)->diffForHumans();
         // dd($hdate);
 
-        return view('homepages.blog_details', compact('date', 'hdate', 'blog'));
+        return view('homepages.blog_details', compact('date', 'hdate', 'blog', 'leatestBlog'));
     }
     public function getCategory($id)
     {

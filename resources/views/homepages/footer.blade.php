@@ -61,10 +61,14 @@
             <!-- <li><a href="#"><i class="flaticon-twitter1"></i></a></li> -->
             <li><a target="_blank"
                 href="https://www.facebook.com/Thai-Emperor-Restaurant-Takeaway-112619794007991/"><img
-                  src="/images/home/facebook.png" alt="Facebook"></a></li>
+                  src="/images/home/facebook.png" alt="Facebook" style="
+    width: 32px;
+"></a></li>
             <li><a target="_blank"
                 href="https://www.tripadvisor.co.uk/Restaurant_Review-g1962041-d23161948-Reviews-Thai_Emperor-Swanley_Sevenoaks_District_Kent_England.html"><img
-                  src="/images/home/tripadd.png" alt="Facebook"></a></li>
+                  src="/images/home/tripadd.png" style="
+    width: 32px;
+" alt="Facebook"></a></li>
             <!--
             <li><a href="#"><i class="flaticon-linkedin11"></i></a></li>
             <li><a href="#"><i class="flaticon-google116"></i></a></li>
@@ -127,6 +131,8 @@
     <li><a class="offcanvas-link" href="https://www.thaiemperor.uk/order.aspx"> Online Order</a></li>
     <li><a class="offcanvas-link" href="https://www.thaiemperor.uk/booktable.aspx">Reservations </a></li>
     <li><a class="offcanvas-link" href="/#gallery">Gallery </a></li>
+    <li><a class="offcanvas-link" href="/#blogs">Blog </a></li>
+    {{-- <li><a class="page-scroll" href="/#blogs">Blog </a></li> --}}
     <li><a class="offcanvas-link" href="/#events">Events</a></li>
   </ul>
 </nav>

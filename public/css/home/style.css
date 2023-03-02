@@ -226,6 +226,7 @@
 
 .blog-grid .blog-info {
   padding: 20px;
+  height: 100%;
 }
 
 .blog-grid .blog-info h5 {
@@ -686,7 +687,7 @@ ul.blog-detail.list-unstyled.list-inline li i {
 }
 
 .article-content {
-  padding-top: 10px;
+  padding: 10px 30px;
   line-height: 30px;
 }
 
@@ -731,11 +732,105 @@ ul.blog-detail.list-unstyled.list-inline li i {
 }
 
 .footer-title img {
-  width: auto;
+  width: 20px;
+  padding-bottom: 5px;
 }
 
 p.blog-title {
   font-size: 18px;
   font-weight: 400;
   color: #20247b;
+}
+
+.equal-height {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 0px;
+}
+
+.blog-grid {
+  height: 100%;
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+section#blog {
+  padding: 55px 0px;
+}
+
+.max-height-3-lines {
+  max-height: 3 * 1.2em;
+  /* Set the max-height to 3 lines of text */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* Set the number of lines to display to 3 */
+  -webkit-box-orient: vertical;
+}
+
+.blog-aside .latest-post-aside+.latest-post-aside {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  margin-top: 15px;
+}
+
+.blog-aside .latest-post-aside .lpa-right {
+  width: 90px;
+}
+
+.blog-aside .latest-post-aside .lpa-right img {
+  border-radius: 3px;
+}
+
+.blog-aside .latest-post-aside .lpa-left {
+  padding-right: 15px;
+}
+
+.blog-aside .latest-post-aside .lpa-title h5 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.blog-aside .latest-post-aside .lpa-title a {
+  color: #20247b;
+  font-weight: 600;
+}
+
+.blog-aside .latest-post-aside .lpa-meta a {
+  color: #6F8BA4;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+img.aside-image {
+  height: 40px;
+  width: 40px;
+}
+
+.lpa-title a {
+  font-family: Roboto, sans-serif;
+  padding: -12px;
+  color: #565656;
+}
+
+.lpa-title {
+  padding: 14px;
+  text-align: center;
+}
+
+.latest-post-aside.media {
+  text-align: center;
+}
+
+.latest-post-aside.media img {
+  height: 200px;
+  width: 200px;
+  margin: 0px auto;
+}
+
+.col-lg-4.gap {
+  margin: 10px 0px;
 }

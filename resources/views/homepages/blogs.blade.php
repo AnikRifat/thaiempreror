@@ -10,22 +10,11 @@
                 </div>
             </div>
         </div>
-        <style>
-            .equal-height {
-                display: flex;
-                flex-wrap: wrap;
-            }
 
-            .blog-grid {
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-            }
-        </style>
-        <div class="row equal-height">
+        <div class="row equal-height ">
 
             @foreach ($blogs as $blog)
-            <div class="col-lg-3">
+            <div class="col-lg-4">
 
 
                 <div class="blog-grid">
@@ -36,9 +25,9 @@
                         </a>
                     </div>
                     <div class="blog-info">
-                        <h5><a href="{{ route('blog.details',$blog->id) }}" class="truncate-1">{{ $blog->title}}</a>
+                        <h5><a href="{{ route('blog.details',$blog->id) }}" class="">{{ $blog->title}}</a>
                         </h5>
-                        <p class="truncate-1">{{ $blog->sub_title}}</p>
+                        <p class="max-height-3-lines">{{ $blog->sub_title}}</p>
                         <div class="btn-bar">
                             <a href="{{ route('blog.details',$blog->id) }}" class="px-btn-arrow">
                                 <span>Read More</span>
@@ -47,10 +36,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
             </div>
             @endforeach
 

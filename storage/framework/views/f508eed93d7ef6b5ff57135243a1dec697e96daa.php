@@ -9,49 +9,39 @@
                 </div>
             </div>
         </div>
-        <style>
-            .equal-height {
-                display: flex;
-                flex-wrap: wrap;
-            }
 
-            .blog-grid {
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-            }
-        </style>
-        <div class="row equal-height">
+        <div class="row equal-height ">
 
-            <?php $__currentLoopData = $blogs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $blog): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <div class="col-lg-3">
+            <?php $__currentLoopData = $blogs;
+            $__env->addLoop($__currentLoopData);
+            foreach ($__currentLoopData as $blog) : $__env->incrementLoopIndices();
+                $loop = $__env->getLastLoop(); ?>
+                <div class="col-lg-4">
 
 
-                <div class="blog-grid">
-                    <div class="blog-img">
+                    <div class="blog-grid">
+                        <div class="blog-img">
 
-                        <a href="<?php echo e(route('blog.details',$blog->id)); ?>">
-                            <img src="/images/home/<?php echo e($blog->image); ?>" title="" alt="">
-                        </a>
-                    </div>
-                    <div class="blog-info">
-                        <h5><a href="<?php echo e(route('blog.details',$blog->id)); ?>" class="truncate-1"><?php echo e($blog->title); ?></a>
-                        </h5>
-                        <p class="truncate-1"><?php echo e($blog->sub_title); ?></p>
-                        <div class="btn-bar">
-                            <a href="<?php echo e(route('blog.details',$blog->id)); ?>" class="px-btn-arrow">
-                                <span>Read More</span>
-                                <i class="arrow"></i>
+                            <a href="<?php echo e(route('blog.details', $blog->id)); ?>">
+                                <img src="/images/home/<?php echo e($blog->image); ?>" title="" alt="">
                             </a>
+                        </div>
+                        <div class="blog-info">
+                            <h5><a href="<?php echo e(route('blog.details', $blog->id)); ?>" class=""><?php echo e($blog->title); ?></a>
+                            </h5>
+                            <p class="max-height-3-lines"><?php echo e($blog->sub_title); ?></p>
+                            <div class="btn-bar">
+                                <a href="<?php echo e(route('blog.details', $blog->id)); ?>" class="px-btn-arrow">
+                                    <span>Read More</span>
+                                    <i class="arrow"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-
-
-
-            </div>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            <?php endforeach;
+            $__env->popLoop();
+            $loop = $__env->getLastLoop(); ?>
 
 
 

@@ -40,7 +40,6 @@
 <!--     Fonts and icons     -->
 <link href="<?php echo e('/css/font-awesome.min.css'); ?>" rel="stylesheet">
 <link href="<?php echo e('/css/material-icons.css'); ?>" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" rel="stylesheet">
 
 <link rel="stylesheet" type="text/css" href="https://jeremyfagis.github.io/dropify/dist/css/dropify.min.css">
 <!--link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" /-->

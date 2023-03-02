@@ -92,8 +92,8 @@
     <div class="row">
       <div class="col-xs-12 col-md-4">
         <div id="about-us" class="welcome-note text-center">
-          <h1>welcome</h1>
-          <h2> to Thai Emperor!</h2>
+          <h1>welcome to</h1>
+          <h1 style="margin-bottom: 10px">Thai Emperor</h1>
           <p class="note">An authentic and equally contemporary restaurant not only serving Thai food but a Thai culture
             rich in hospitality and warmth! A hidden gem of Swanley and surrounding areas, joy and pride of the locals!
             Very reasonably priced, excellent wine selection and award winning duo-managers always ensure that you are
@@ -682,7 +682,7 @@
           <div class="col-xs-12 col-md-12">
             <div class="grid">
               <figure class="effect-cheff gallary-image">
-                <img src="/images/home/Pad Thai.jpg" alt="Gallery 08">
+                <img src="/images/home/pad-thai.jpg" alt="Gallery 08">
                 {{-- <figcaption>
         <div class="gallary-hover-text">
           <a class="yellow-bar fancybox" href="/images/home/gallery-08.jpg" data-fancybox-group="gallery"><i class="fa fa-plus"></i></a>
@@ -703,7 +703,7 @@
 <!--====| Gallery End |====-->
 
 <!-- new event -->
-<section id="events" class="section-padding reservation" style="display:none">
+<section id="events" class="section-padding reservation">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 ">
@@ -819,16 +819,16 @@
 <!--===| blog section Start|===-->
 <section class="section-padding signature-wrapper" id="blogs">
   <div class="container">
-    <div class="row">
+    <div class="row ">
       <div class="col-xs-12">
         <h1>Blog Posts</h1>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row equal-height">
 
       @foreach ($blogs as $blog)
-      <div class="col-lg-4">
+      <div class="col-lg-4 gap">
 
 
         <div class="blog-grid">
@@ -839,9 +839,10 @@
             </a>
           </div>
           <div class="blog-info">
-            <a href="{{ route('blog.details',$blog->id) }}"><p
-                class="blog-title truncate-1">{{ $blog->title}}</p></a>
-            <p class="truncate-1">{{ $blog->sub_title}}</p>
+            <a href="{{ route('blog.details',$blog->id) }}">
+              <p class="blog-title">{{ $blog->title}}</p>
+            </a>
+            <p class="max-height-3-lines">{{ $blog->sub_title}}</p>
             <div class="btn-bar">
               <a href="{{ route('blog.details',$blog->id) }}" class="px-btn-arrow">
                 <span>Read More</span>
@@ -852,16 +853,12 @@
         </div>
       </div>
       @endforeach
-      <div class="col-lg-12">
-        <a class="btn" style="padding:5px 15px;font-size: 15px" href="/blogs">view All</a>
-      </div>
-
-
-
 
 
     </div>
-
+    <div class="text-center">
+      <a class="btn" style="padding:5px 15px;font-size: 15px" href="/blogs">view All</a>
+    </div>
 
 
   </div>
