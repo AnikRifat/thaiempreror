@@ -4,7 +4,9 @@
 <script src="{{'/js/material.min.js'}}" type="text/javascript"></script>
 <script src="{{'/js/perfect-scrollbar.jquery.min.js'}}" type="text/javascript"></script>
 <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
-<script type="text/javascript" src="https://jeremyfagis.github.io/dropify/dist/js/dropify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js"
+  integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- Forms Validations Plugin -->
 <script src="{{'/js/jquery.validate.min.js'}}"></script>
 <!--  Plugin for Date Time Picker and Full Calendar Plugin-->

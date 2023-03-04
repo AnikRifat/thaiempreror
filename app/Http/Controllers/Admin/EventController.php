@@ -53,7 +53,7 @@ class EventController extends Controller
         $this->validate($request, array(
             'title'       => 'required|max:255',
             'sub_title'   => 'max:255',
-            'details'     => 'required|max:1000',
+            'details'     => 'required|max:100000',
             'footer_text' => 'max:500',
             'image'       => 'required|image'
 
@@ -69,7 +69,7 @@ class EventController extends Controller
         $event->status      = 1;
 
         //save image//
-        if($request->hasFile('image')){
+        if ($request->hasFile('image')) {
             $image    = $request->file('image');
             $filename = time() . '.' . $image->getClientOriginalExtension();
             $location = ('images/home/' . $filename);
@@ -124,7 +124,7 @@ class EventController extends Controller
         $this->validate($request, array(
             'title'       => 'required|max:255',
             'sub_title'   => 'max:255',
-            'details'     => 'required|max:1000',
+            'details'     => 'required|max:100000',
             'footer_text' => 'max:500',
             'status'      => 'max:10',
             'image'       => 'image'
@@ -144,7 +144,7 @@ class EventController extends Controller
         $event->status      = $request->input('status');
 
         //save image//
-        if($request->hasFile('image')){
+        if ($request->hasFile('image')) {
             $image    = $request->file('image');
             $filename = time() . '.' . $image->getClientOriginalExtension();
             $location = ('images/home/' . $filename);
@@ -156,9 +156,9 @@ class EventController extends Controller
         $event->save();
 
         //delete exists image
-        if($request->hasFile('image')){
-            $ex_img = 'images/home/'.$exist_image;
-            if(File::exists($ex_img)){
+        if ($request->hasFile('image')) {
+            $ex_img = 'images/home/' . $exist_image;
+            if (File::exists($ex_img)) {
                 File::delete($ex_img);
             }
         }
@@ -167,7 +167,7 @@ class EventController extends Controller
         Session::flash('success', 'The event was successfully updated.');
 
         //redirect with flash data to address
-        return redirect('/admin/edit_event/'.$id);
+        return redirect('/admin/edit_event/' . $id);
     }
 
     /**

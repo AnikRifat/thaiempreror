@@ -127,13 +127,13 @@
     <li><a class="offcanvas-link" href="/#home">Home</a></li>
     <li><a class="offcanvas-link" href="/#about-us">About</a></li>
     {{-- <li><a class="offcanvas-link" href="/#service">service</a></li> --}}
-    <li><a class="offcanvas-link" href="/#food-menu">Menu</a></li>
+    <li><a class="offcanvas-link" href="/#food-menu">Food Menu</a></li>
     <li><a class="offcanvas-link" href="https://www.thaiemperor.uk/order.aspx"> Online Order</a></li>
-    <li><a class="offcanvas-link" href="https://www.thaiemperor.uk/booktable.aspx">Reservations </a></li>
+    <li><a class="offcanvas-link" href="/reservations">Reservations </a></li>
     <li><a class="offcanvas-link" href="/#gallery">Gallery </a></li>
     <li><a class="offcanvas-link" href="/#blogs">Blog </a></li>
     {{-- <li><a class="page-scroll" href="/#blogs">Blog </a></li> --}}
-    <li><a class="offcanvas-link" href="/#events">Events</a></li>
+    <li><a class="offcanvas-link" href="{{ route('event.details',4) }}">Events</a></li>
   </ul>
 </nav>
 

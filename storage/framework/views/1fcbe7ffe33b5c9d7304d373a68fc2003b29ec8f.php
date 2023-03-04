@@ -604,7 +604,7 @@
 <!--====| Gallery End |====-->
 
 <!-- new event -->
-<section id="events" class="section-padding reservation" style="display:none">
+<section id="events" class="section-padding reservation">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 ">
@@ -627,25 +627,27 @@
             <?php $r = 1; ?>
 
             <?php $__currentLoopData = $events; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $event): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <div class="item <?php echo e($r == 1? 'active':''); ?>">
-              <div class="left-images">
-                <img src="/images/home/<?php echo e($event->image); ?>" alt="">
-              </div>
-              <div class="details-text" style="min-height:400px">
-                <div class="content-holder">
-                  <h2><a href="#"><?php echo e($event->title); ?></a></h2>
-                  <P><?php echo e($event->details); ?></P>
-                  <address>
-                    <strong><?php echo e($event->footer_text); ?></strong>
-                    <!-- 1612 Collins Str, Victoria 8007
+            <a href="<?php echo e(route('event.details',$event->id)); ?>">
+              <div class="item <?php echo e($r == 1? 'active':''); ?>">
+                <div class="left-images">
+                  <img src="/images/home/<?php echo e($event->image); ?>" alt="">
+                </div>
+                <div class="details-text" style="min-height:400px">
+                  <div class="content-holder">
+                    <h2><a href="<?php echo e(route('event.details',$event->id)); ?>"><?php echo e($event->title); ?></a></h2>
+                    <P><?php echo e($event->sub_title); ?></P>
+                    <address>
+                      <strong><?php echo e($event->footer_text); ?></strong>
+                      <!-- 1612 Collins Str, Victoria 8007
                 <br>
                 <strong>Time: </strong>
                 07:30pm -->
-                  </address>
-                  <!-- <a class="btn btn-imfo btn-read-more" href="events-details.html">Read more</a> -->
+                    </address>
+                    <!-- <a class="btn btn-imfo btn-read-more" href="events-details.html">Read more</a> -->
+                  </div>
                 </div>
-              </div>
-            </div> <!-- item -->
+              </div> <!-- item -->
+            </a>
             <?php $r++; ?>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 

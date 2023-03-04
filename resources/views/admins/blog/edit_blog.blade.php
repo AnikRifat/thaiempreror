@@ -29,7 +29,7 @@
                         <div class="">
                             {{ Form::label('image', 'Upload Image (Image Dimension: 570x298)', ['class' => '']) }}
                             {{ Form::file('image', ['class' => 'dropify','data-default-file'=>'/images/home/'.$blog->image ,
-                            'style' => 'border-bottom:1px solid #ccc; padding:10px 5px;width:100%']) }}
+                            'style' => 'border-bottom:1px solid #ccc; padding:10px 5px;']) }}
                         </div>
                         <div class="form-group">
                             <label> <input type="radio" class="" name="status" value="1" {{$blog->status == 1?

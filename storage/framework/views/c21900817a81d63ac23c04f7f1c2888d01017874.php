@@ -59,11 +59,13 @@
                   <li><a class="page-scroll" href="/#food-menu">Food Menu</a></li>
                   <li><a class="page-scroll" href="https://www.thaiemperor.uk/order.aspx" target="_blank">Online
                       Order</a></li>
-                  <!--<li><a class="page-scroll" href="/reservations?v=1.9099">Reservations </a></li> -->
+                      
+                <li><a class="page-scroll" href="/reservations">Reservations </a></li>
                   <!-- <li><a class="page-scroll" href="#cheff">Chef</a></li>  -->
                   <li><a class="page-scroll" href="/#gallery">Gallery </a></li>
                   <li><a class="page-scroll" href="/#blogs">Blog </a></li>
-                  <li><a class="page-scroll" href="#contact" style="border-right:none">Contact</a></li>
+                  <li><a class="page-scroll" href="<?php echo e(route('event.details',4)); ?>" style="border-right:none">Events</a>
+                  </li>
                   <!--<li><a class="page-scroll" href="/#events" style="border-right:none">Events</a></li>  -->
                   <!--{{-- <li><a class="page-scroll" href="/#contact">Contact US</a></li>-->
                   <!-- <li><i id="search" class="flaticon-search74"></i></li> -->

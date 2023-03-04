@@ -726,25 +726,27 @@
             <?php $r = 1; ?>
 
             @foreach($events as $event)
-            <div class="item {{$r == 1? 'active':''}}">
-              <div class="left-images">
-                <img src="/images/home/{{$event->image}}" alt="">
-              </div>
-              <div class="details-text" style="min-height:400px">
-                <div class="content-holder">
-                  <h2><a href="#">{{$event->title}}</a></h2>
-                  <P>{{$event->details}}</P>
-                  <address>
-                    <strong>{{$event->footer_text}}</strong>
-                    <!-- 1612 Collins Str, Victoria 8007
+            <a href="{{ route('event.details',$event->id) }}">
+              <div class="item {{$r == 1? 'active':''}}">
+                <div class="left-images">
+                  <img src="/images/home/{{$event->image}}" alt="">
+                </div>
+                <div class="details-text" style="min-height:400px">
+                  <div class="content-holder">
+                    <h2><a href="{{ route('event.details',$event->id) }}">{{$event->title}}</a></h2>
+                    <P>{{$event->sub_title}}</P>
+                    <address>
+                      <strong>{{$event->footer_text}}</strong>
+                      <!-- 1612 Collins Str, Victoria 8007
                 <br>
                 <strong>Time: </strong>
                 07:30pm -->
-                  </address>
-                  <!-- <a class="btn btn-imfo btn-read-more" href="events-details.html">Read more</a> -->
+                    </address>
+                    <!-- <a class="btn btn-imfo btn-read-more" href="events-details.html">Read more</a> -->
+                  </div>
                 </div>
-              </div>
-            </div> <!-- item -->
+              </div> <!-- item -->
+            </a>
             <?php $r++; ?>
             @endforeach
 

@@ -78,6 +78,13 @@ class HomeController extends Controller
 
         return view('homepages.blog_details', compact('date', 'hdate', 'blog', 'leatestBlog'));
     }
+    public function eventdetails($id)
+    {
+        $event = Event::find($id);
+        // dd($hdate);
+
+        return view('homepages.event_details', compact('event'));
+    }
     public function getCategory($id)
     {
         $category = FoodCat::find($id);

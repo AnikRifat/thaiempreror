@@ -20,6 +20,7 @@ Route::group(['middleware' => ['web']], function () {
 	Route::get('/', 'HomeController@index');
 	Route::get('/blogs', 'HomeController@blogs')->name('blogs');
 	Route::get('/blog/{id}', 'HomeController@blogdetails')->name('blog.details');
+	Route::get('/event/{id}', 'HomeController@eventdetails')->name('event.details');
 	// Route::get('/', 'Auth\AdminLoginController@showLoginForm');
 	Route::get('/place_order', 'HomeController@place_order');
 	Route::post('/place_order', 'HomeController@PlaceOrder')->name('home.place_order');
